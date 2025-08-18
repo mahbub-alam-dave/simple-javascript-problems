@@ -96,11 +96,41 @@ findEvenNumbers([1, 2, 3, 4, 5])
 // Problem 8: Capitalize First Letter of Each Word
 function wordsFirstCharCapitalization (input) {
     // const output 
-    const output = input.split(" ").forEach(word => {
-        return word
-    });
+    const output = input.split(" ").map(element => element.charAt(0).toUpperCase() + element.slice(1)).join(" ")
 
     console.log(output)
     return output   
 }
-wordsFirstCharCapitalization("hello world")
+wordsFirstCharCapitalization("hello world bangladesh")
+
+// Problem 9: Find the Factorial of a Number
+function factorialNumber (input) {
+    let result = 1
+    for(let i = input; i >=1; i--) {
+      result = result * i
+    }
+    console.log(result)
+    return result
+}
+
+factorialNumber(4)
+
+// Problem 10: PingPong Challenge
+function pingPong () {
+    const pingPontNumbers = []
+    for(let i =1; i <= 20; i++) {
+        if(i %3 === 0) {
+            pingPontNumbers.push("ping")
+        }
+        else if (i %5 === 0) {
+            pingPontNumbers.push("pong")
+        }
+        else {
+            pingPontNumbers.push(i)
+        }
+    }
+    console.log(pingPontNumbers)
+    return pingPontNumbers
+}
+
+pingPong()
